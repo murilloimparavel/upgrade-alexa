@@ -1,0 +1,50 @@
+{
+  "manifest": {
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "uri": "arn:aws:lambda:us-east-1:830965841197:function:3586f684-bf59-4959-991b-ce81c5f71fd8:Release_0"
+        },
+        "interfaces": [],
+        "locales": {},
+        "regions": {
+          "NA": {
+            "endpoint": {
+              "uri": "arn:aws:lambda:us-east-1:830965841197:function:3586f684-bf59-4959-991b-ce81c5f71fd8:Release_0"
+            }
+          },
+          "EU": {
+            "endpoint": {
+              "uri": "arn:aws:lambda:eu-west-1:830965841197:function:3586f684-bf59-4959-991b-ce81c5f71fd8:Release_0"
+            }
+          },
+          "FE": {
+            "endpoint": {
+              "uri": "arn:aws:lambda:us-west-2:830965841197:function:3586f684-bf59-4959-991b-ce81c5f71fd8:Release_0"
+            }
+          }
+        }
+      }
+    },
+    "manifestVersion": "1.0",
+    "publishingInformation": {
+      "distributionCountries": [],
+      "isAvailableWorldwide": true,
+      "locales": {
+        "pt-BR": {
+          "description": "Integração da Alexa com GPT-3",
+          "examplePhrases": [
+            "me diga... [sua pergunta]",
+            "você pode [seu pedido]",
+            "Ps: sempre use verbo imperativos",
+            "você pode escrever um poema de amor"
+          ],
+          "keywords": [],
+          "name": "Jarvis",
+          "summary": "Desenvolvido por Murillo Imparável"
+        }
+      },
+      "testingInstructions": "Alexa, fique mais inteligente!"
+    }
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "fique mais inteligente",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": [
+            "cancelar"
+          ]
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": [
+            "tudo bem",
+            "obrigado",
+            "entendi",
+            "tudo certo",
+            "beleza",
+            "ok"
+          ]
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": [
+            "parar",
+            "pare",
+            "nao",
+            "não"
+          ]
+        },
+        {
+          "name": "HelloWorldIntent",
+          "slots": [],
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AskOpenAIIntent",
+          "slots": [
+            {
+              "name": "question",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "me fale {question}",
+            "me diga {question}",
+            "diga {question}",
+            "fale {question}",
+            "qual {question}",
+            "sabe {question}",
+            "quando {question}",
+            "crie {question}",
+            "quantos {question}",
+            "explique {question}",
+            "porque {question}",
+            "quais {question}",
+            "jarvis {question}",
+            "você pode {question}",
+            "posso {question}",
+            "gere {question}",
+            "por que {question}",
+            "o que {question}",
+            "pergunta {question}",
+            "como {question}"
+          ]
+        }
+      ],
+      "types": []
+    }
+  },
+  "version": "6"
+}
