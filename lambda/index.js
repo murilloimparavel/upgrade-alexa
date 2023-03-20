@@ -86,17 +86,24 @@ const AskOpenAIIntentHandler = {
         const question =
             Alexa.getSlotValue(handlerInput.requestEnvelope, 'question');
 
-        const response = await openai.createCompletion({
-            model: 'text-davinci-003',
-            prompt: question,
-            temperature: 0.2,
+        const response = await openai.createChatCompletion({
+            model: "gpt-3.5-turbo",
+            messages: [
+                {"role": "system", "content": "Você é um assistente útil e amigável."},
+                {"role": "user", "content": "Quem ganhou a série mundial em 2020?"},
+                {"role": "assistant", "content": "Os Los Angeles Dodgers venceram a World Series em 2020."},
+                {"role": "user", "content": "Onde foi tocado?"},
+                {"role": "assistant",'content': 'A 2020 World Series foi disputada em Arlington, Texas, no Globe Life Field, que era o novo estádio do Texas Rangers.'},
+                {"role": "user", "content": question}
+            ],
+            temperature: 0.7,
             max_tokens: 500,
             top_p: 1,
             frequency_penalty: 0.0,
             presence_penalty: 0.0
         });
 
-        const speakOutput = response.data.choices[0].text +
+        const speakOutput = response["data"]["choices"][0]["message"]["content"] +
             '.\nPosso ajudar com mais alguma coisa?';
             
         if (Alexa.getSupportedInterfaces(handlerInput.requestEnvelope)['Alexa.Presentation.APL']) {
